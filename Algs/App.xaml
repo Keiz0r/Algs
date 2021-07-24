@@ -1,0 +1,35 @@
+﻿<Application x:Class="Algs.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Algs"
+             xmlns:ViewModel="clr-namespace:Algs.MVVM.ViewModel"
+             xmlns:View="clr-namespace:Algs.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+      
+      <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+          <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+        <ResourceDictionary Source="Theme/WindowControlButtonTheme.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+
+      <DataTemplate DataType="{x:Type ViewModel:BubbleViewModel}">
+        <View:BubbleView/>
+      </DataTemplate>
+        
+      <DataTemplate DataType="{x:Type ViewModel:InsertionViewModel}">
+        <View:InsertionView/>
+      </DataTemplate>
+        
+      <DataTemplate DataType="{x:Type ViewModel:QuickViewModel}">
+        <View:QuickView/>
+      </DataTemplate>
+        
+      <DataTemplate DataType="{x:Type ViewModel:RadixViewModel}">
+        <View:RadixView/>
+      </DataTemplate>
+
+    </ResourceDictionary>
+
+  </Application.Resources>
+</Application>
