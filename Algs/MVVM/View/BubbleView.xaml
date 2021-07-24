@@ -30,7 +30,7 @@
       </ItemsControl.ItemContainerStyle>
       <ItemsControl.ItemTemplate>
         <DataTemplate>
-          <Rectangle Width="{Binding Width}" Height="{Binding Height}" Fill="White"/>
+          <Rectangle Width="{Binding Width}" Height="{Binding Height}" Fill="{Binding Color}"/>
         </DataTemplate>
       </ItemsControl.ItemTemplate>
     </ItemsControl>

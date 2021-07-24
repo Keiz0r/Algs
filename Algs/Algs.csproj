@@ -7,4 +7,8 @@
     <ApplicationIcon>Main_Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SortingLib\SortingLib.csproj" />
+  </ItemGroup>
+
 </Project>

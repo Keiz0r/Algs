@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algs", "Algs\Algs.csproj", "{D2CC4AA5-1B38-432B-8734-30689E843B97}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F13781E0-EB0F-4980-A2D7-B974417ECB2A} = {F13781E0-EB0F-4980-A2D7-B974417ECB2A}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingLib", "SortingLib\SortingLib.csproj", "{F13781E0-EB0F-4980-A2D7-B974417ECB2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingLib", "SortingLib\SortingLib.csproj", "{F13781E0-EB0F-4980-A2D7-B974417ECB2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
