@@ -24,5 +24,11 @@ namespace Algs
     {
       InitializeComponent();
     }
+
+    private void DragMainWindow(object sender, MouseButtonEventArgs e)
+    {
+      DragMove();
+    }
+
   }
 }

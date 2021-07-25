@@ -4,14 +4,16 @@
              xmlns:local="clr-namespace:Algs"
              xmlns:ViewModel="clr-namespace:Algs.MVVM.ViewModel"
              xmlns:View="clr-namespace:Algs.MVVM.View"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
       
       <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
           <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-        <ResourceDictionary Source="Theme/WindowControlButtonTheme.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
+          <ResourceDictionary Source="Theme/WindowControlButtonTheme.xaml"/>
+          <ResourceDictionary Source="Theme/DataControlButtonTheme.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
 
       <DataTemplate DataType="{x:Type ViewModel:BubbleViewModel}">
         <View:BubbleView/>
@@ -29,6 +31,8 @@
         <View:RadixView/>
       </DataTemplate>
 
+      <System:Boolean x:Key="FalseValue">False</System:Boolean>
+      <System:Boolean x:Key="TrueValue">True</System:Boolean>
     </ResourceDictionary>
 
   </Application.Resources>

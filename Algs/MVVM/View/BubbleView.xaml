@@ -34,12 +34,40 @@
         </DataTemplate>
       </ItemsControl.ItemTemplate>
     </ItemsControl>
+
+    <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom">
+      
+      <TextBlock Text="{Binding StepCounter}"
+                 Foreground="White"
+                 FontSize="16"
+                 FontFamily="Lucida Calligraphy"
+                 Margin="0,0,200,0"/>
+      
+      <Button Width="70"
+              Style="{StaticResource DataControlButtonTheme}"
+              Command="{Binding StepButton}"
+              CommandParameter="{StaticResource FalseValue}"
+              Content="Step"
+              Margin="0,0,2,0"/>
+      
+      <Button Width="70"
+              Style="{StaticResource DataControlButtonTheme}"
+              Command="{Binding FinishButton}"
+              CommandParameter="{StaticResource TrueValue}"
+              Content="Finish"
+              Margin="0,0,2,0"/>
+      
+      <Button Width="70"
+              Style="{StaticResource DataControlButtonTheme}"
+              Command="{Binding RefreshButton}"
+              Content="Refresh"
+              Margin="0,0,2,0"/>
+      
+    </StackPanel>
     
-    <Button HorizontalAlignment="Right"
-            Width="50"
-            Height="20"
-            Command="{Binding UpdateButton}"
-            Content="Update"/>
+    
     
   </Grid>
 </UserControl>

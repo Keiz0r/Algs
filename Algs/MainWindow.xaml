@@ -33,11 +33,6 @@
         <ColumnDefinition Width="1*"/>
       </Grid.ColumnDefinitions>
 
-      <!-- Handle 
-      <Rectangle Grid.ColumnSpan="2"
-                 Fill="Transparent"
-                 MouseLeftButtonDown=""/>
-      -->
       <!-- Name -->
       <TextBlock Text="Algos Visualizer"
                  VerticalAlignment="Center"
@@ -46,6 +41,11 @@
                  Foreground="White"
                  FontSize="22"
                  FontFamily="Lucida Calligraphy"/>
+      
+      <!-- Handle -->
+      <Rectangle Grid.ColumnSpan="2"
+                 Fill="Transparent"
+                 MouseLeftButtonDown="DragMainWindow"/>
 
       <!-- Right panel -->
       <StackPanel Grid.Row="1"

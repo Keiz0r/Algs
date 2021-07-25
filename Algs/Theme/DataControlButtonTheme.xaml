@@ -1,21 +1,19 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-  <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
-         TargetType="{x:Type RadioButton}"
-         x:Key="MenuButtonTheme">
-
+  <Style BasedOn="{StaticResource {x:Type Button}}"
+         TargetType="{x:Type Button}"
+         x:Key="DataControlButtonTheme">
     <Style.Setters>
-      
+
       <Setter Property="Template">
         <Setter.Value>
-          <ControlTemplate TargetType="RadioButton">
-            
+          <ControlTemplate TargetType="{x:Type Button}">
+
             <Grid VerticalAlignment="Stretch"
                   HorizontalAlignment="Stretch"
-                  Height="50"
+                  Height="18"
                   Background="{TemplateBinding Background}">
-              
+
               <TextBlock Text="{TemplateBinding Property=Content}"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Center"
@@ -32,11 +30,11 @@
     </Style.Setters>
 
     <Style.Triggers>
-      <Trigger Property="IsChecked" Value="True">
+      <Trigger Property="IsMouseOver" Value="True">
         <Setter Property="Background" Value="#8c7374"/>
       </Trigger>
     </Style.Triggers>
 
   </Style>
-  
+
 </ResourceDictionary>

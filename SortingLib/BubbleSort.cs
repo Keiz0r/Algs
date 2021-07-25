@@ -2,19 +2,57 @@
 {
   public static class BubbleSort
   {
-    public static uint SortStep(int[] array, ref int lastIndex)
+    public static uint Step { get { return _step; } }
+    private static uint _step = 0;
+
+    public static void SortStep(int[] array)
     {
-      uint stepCounter = 0;
-      for (var i = 0; i < array.Length - 1 - lastIndex; i++)
+      for (var i = 0; i < array.Length - 1; i++)
       {
         if(array[i] > array[i + 1])
         {
           Swap(ref array[i], ref array[i+1]);
-          stepCounter++;
         }
       }
-      lastIndex++;
-      return stepCounter;
+      _step++;
+    }
+
+    public static void Sort(int[] array)
+    {
+      for (var i = 0; i < array.Length - 1; i++)
+      {
+        bool isSorted = false;
+        for (var j = 0; j < array.Length - 1 - i; j++)
+        {
+          if (array[j] > array[j + 1])
+          {
+            Swap(ref array[j], ref array[j + 1]);
+            isSorted = true;
+          }
+        }
+        if (!isSorted)
+        {
+          break;
+        }
+        _step++;
+      }
+    }
+
+    public static void ResetStep()
+    {
+      _step = 0;
+    }
+
+    public static bool IsSorted(int[] array)
+    {
+      for(var i = 0; i < array.Length - 1; i++)
+      {
+        if(array[i] > array[i + 1])
+        {
+          return false;
+        }
+      }
+      return true;
     }
 
     private static void  Swap(ref int i, ref int j)
